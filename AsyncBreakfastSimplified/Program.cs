@@ -8,9 +8,9 @@ namespace AsyncBreakfastSimplified
 {
     class Program
     {
- 
 
-static async Task Main(string[] args)
+
+        static async Task Main(string[] args)
         {
             Task<Egg> eggTask = FryEggAsync();
             Task<Bacon> baconTask = FryBaconAsync();
@@ -35,22 +35,22 @@ static async Task Main(string[] args)
 
         static async Task<Toast> ToastBreadAsync()
         {
-            await Task.Delay(2000);
+            await Task.Delay(4000);
             var random = new Random();
-            if(random.Next(1, 100) == 13)
-              throw new InvalidOperationException("The toaster is on fire");
+            if (random.Next(1, 100) == 13)
+                throw new InvalidOperationException("The toaster is on fire");
             return new Toast();
         }
 
         static async Task<Egg> FryEggAsync()
         {
-            await Task.Delay(5000);
+            await Task.Delay(10000);
             return new Egg();
         }
 
         static async Task<Bacon> FryBaconAsync()
         {
-            await Task.Delay(3000);
+            await Task.Delay(6000);
             return new Bacon();
         }
 

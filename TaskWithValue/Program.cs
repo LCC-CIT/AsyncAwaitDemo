@@ -20,6 +20,7 @@ namespace AsyncAwaitDemo
             Console.WriteLine("Timer1 elapsed time: " + time);
             time = await timer2;
             Console.WriteLine("Timer2 elapsed time: " + time);
+            Console.WriteLine("Total time: " + ElapsedTime(startTime));
         }
 
 
